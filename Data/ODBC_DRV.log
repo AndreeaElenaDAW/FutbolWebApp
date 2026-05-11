@@ -1,0 +1,145 @@
+////////////////////////////////////////////////////////////
+Starting conversion at 11/05/2026 20:04:53,231
+////////////////////////////////////////////////////////////
+
+------------------------------------------------------------
+Converting Recnum table: 253, CodeType, Code Maintenance Type Table
+Progress:Start time: 11/05/2026 20:04:53,235
+Start time: 11/05/2026 20:04:53,235
+Structure_Start
+Structure_Copy
+Set_Attribute DF_FILE_RECNUM_TABLE to 0
+Replacing recnum with primary index:1
+Set_Attribute DF_FILE_PRIMARY_INDEX to 1
+Set_Attribute DF_INDEX_SQL_PRIMARY_KEY to 1
+AssignMinimalLength
+RealignOverlaps
+Structure_End
+Progress:Creating new table.
+Creating new table.
+Progress:ERROR 12289: Error general 42S01 (1050)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]Table 'codetype' already exists  Table = CodeType (0), Source = ODBC_DRV.Structure_End.CreateTable
+ERROR 12289: Error general 42S01 (1050)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]Table 'codetype' already exists  Table = CodeType (0), Source = ODBC_DRV.Structure_End.CreateTable
+Progress:End time: 11/05/2026 20:04:53,265
+End time: 11/05/2026 20:04:53,265
+Progress:Total time to convert table: 0:0:0:0,03
+Total time to convert table: 0:0:0:0,03
+
+------------------------------------------------------------
+Converting Recnum table: 254, CodeMast, Code Maintenance Code Table
+Progress:Start time: 11/05/2026 20:04:53,269
+Start time: 11/05/2026 20:04:53,269
+Structure_Start
+Structure_Copy
+Set_Attribute DF_FILE_RECNUM_TABLE to 0
+Replacing recnum with primary index:1
+Set_Attribute DF_FILE_PRIMARY_INDEX to 1
+Set_Attribute DF_INDEX_SQL_PRIMARY_KEY to 1
+AssignMinimalLength
+RealignOverlaps
+Structure_End
+Progress:Creating new table.
+Creating new table.
+Progress:ERROR 12289: Error general 42S01 (1050)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]Table 'codemast' already exists  Table = CodeMast (0), Source = ODBC_DRV.Structure_End.CreateTable
+ERROR 12289: Error general 42S01 (1050)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]Table 'codemast' already exists  Table = CodeMast (0), Source = ODBC_DRV.Structure_End.CreateTable
+Progress:End time: 11/05/2026 20:04:53,275
+End time: 11/05/2026 20:04:53,275
+Progress:Total time to convert table: 0:0:0:0,006
+Total time to convert table: 0:0:0:0,006
+
+------------------------------------------------------------
+Converting Recnum table: 263, WebAppSession, WebApp Session
+Progress:Start time: 11/05/2026 20:04:53,279
+Start time: 11/05/2026 20:04:53,279
+Structure_Start
+Structure_Copy
+Set_Attribute DF_FILE_RECNUM_TABLE to 0
+Replacing recnum with primary index:1
+Set_Attribute DF_FILE_PRIMARY_INDEX to 1
+Set_Attribute DF_INDEX_SQL_PRIMARY_KEY to 1
+AssignMinimalLength
+RealignOverlaps
+Structure_End
+Progress:Creating new table.
+Creating new table.
+Progress:ERROR 12289: Error general 42S01 (1050)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]Table 'webappsession' already exists  Table = WebAppSession (0), Source = ODBC_DRV.Structure_End.CreateTable
+ERROR 12289: Error general 42S01 (1050)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]Table 'webappsession' already exists  Table = WebAppSession (0), Source = ODBC_DRV.Structure_End.CreateTable
+Progress:End time: 11/05/2026 20:04:53,285
+End time: 11/05/2026 20:04:53,285
+Progress:Total time to convert table: 0:0:0:0,006
+Total time to convert table: 0:0:0:0,006
+
+------------------------------------------------------------
+Converting Recnum table: 264, WebAppUser, WebApp User
+Progress:Start time: 11/05/2026 20:04:53,285
+Start time: 11/05/2026 20:04:53,285
+Structure_Start
+Structure_Copy
+Set_Attribute DF_FILE_RECNUM_TABLE to 0
+Replacing recnum with primary index:1
+Set_Attribute DF_FILE_PRIMARY_INDEX to 1
+Set_Attribute DF_INDEX_SQL_PRIMARY_KEY to 1
+AssignMinimalLength
+RealignOverlaps
+Structure_End
+Progress:Creating new table.
+Creating new table.
+Progress:ERROR 12289: Error general 42S01 (1050)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]Table 'webappuser' already exists  Table = WebAppUser (0), Source = ODBC_DRV.Structure_End.CreateTable
+ERROR 12289: Error general 42S01 (1050)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]Table 'webappuser' already exists  Table = WebAppUser (0), Source = ODBC_DRV.Structure_End.CreateTable
+Progress:End time: 11/05/2026 20:04:53,303
+End time: 11/05/2026 20:04:53,303
+Progress:Total time to convert table: 0:0:0:0,018
+Total time to convert table: 0:0:0:0,018
+
+------------------------------------------------------------
+Converting Recnum table: 265, WebAppServerProps, WebApp Server Props
+Progress:Start time: 11/05/2026 20:04:53,306
+Start time: 11/05/2026 20:04:53,306
+Structure_Start
+Structure_Copy
+Set_Attribute DF_FILE_RECNUM_TABLE to 0
+Replacing recnum with primary index:1
+Set_Attribute DF_FILE_PRIMARY_INDEX to 1
+Set_Attribute DF_INDEX_SQL_PRIMARY_KEY to 1
+AssignMinimalLength
+RealignOverlaps
+Structure_End
+Progress:Creating new table.
+Creating new table.
+Progress:ERROR 12289: Error general 42S01 (1050)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]Table 'webappserverprops' already exists  Table = WebAppServerProps (0), Source = ODBC_DRV.Structure_End.CreateTable
+ERROR 12289: Error general 42S01 (1050)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]Table 'webappserverprops' already exists  Table = WebAppServerProps (0), Source = ODBC_DRV.Structure_End.CreateTable
+Progress:End time: 11/05/2026 20:04:53,316
+End time: 11/05/2026 20:04:53,316
+Progress:Total time to convert table: 0:0:0:0,01
+Total time to convert table: 0:0:0:0,01
+
+------------------------------------------------------------
+Converting Recnum table: 270, DFLastID, DFLastID
+Progress:Start time: 11/05/2026 20:04:53,319
+Start time: 11/05/2026 20:04:53,319
+Structure_Start
+Structure_Copy
+Set_Attribute DF_FILE_PRIMARY_INDEX to 0
+AssignMinimalLength
+RealignOverlaps
+Structure_End
+Progress:Creating new table.
+Creating new table.
+Progress:ERROR 12289: Error general HY000 (1113)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]A table must have at least 1 column  Table = DFLastID (0), Source = ODBC_DRV.Structure_End.CreateTable
+ERROR 12289: Error general HY000 (1113)--[MySQL][ODBC 9.7(w) Driver][mysqld-5.5.5-10.11.16-MariaDB]A table must have at least 1 column  Table = DFLastID (0), Source = ODBC_DRV.Structure_End.CreateTable
+Progress:End time: 11/05/2026 20:04:53,345
+End time: 11/05/2026 20:04:53,345
+Progress:Total time to convert table: 0:0:0:0,026
+Total time to convert table: 0:0:0:0,026
+
+############################################################
+List of tables that experienced errors while converting:
+   CodeType - Unable to create.
+   CodeMast - Unable to create.
+   WebAppSes- Unable to create.
+   WebAppUse- Unable to create.
+   WebAppSer- Unable to create.
+   DFLastID - Unable to create.
+////////////////////////////////////////////////////////////
+Finished conversion at 11/05/2026 20:04:53,35
+Total conversion time: 0:0:0:0,116
+////////////////////////////////////////////////////////////

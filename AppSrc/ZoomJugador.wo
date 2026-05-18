@@ -10,6 +10,7 @@ Use cWebForm.pkg
 Use cligaDataDictionary.dd
 Use cequipoDataDictionary.dd
 Use cjugadorDataDictionary.dd
+Use cposicionDataDictionary.dd 
 
 Object oZoomJugador is a cWebView
     Set piColumnCount to 12
@@ -20,10 +21,11 @@ Object oZoomJugador is a cWebView
     Set Verify_Save_Msg to 0
     Set piMaxWidth to 1024
 
-    WebRegisterPath ntNavigateForward oSelectEquipo
-
     Object oliga_DD is a cligaDataDictionary
     End_Object 
+
+    Object ooposicion_DD is a cposicionDataDictionary 
+    End_Object
 
     Object oequipo_DD is a cequipoDataDictionary
         Set DDO_Server to oliga_DD
@@ -31,6 +33,7 @@ Object oZoomJugador is a cWebView
 
     Object ojugador_DD is a cjugadorDataDictionary
         Set DDO_Server to oequipo_DD
+        Set DDO_Server to ooposicion_DD // Relacionamos jugador con posición
     End_Object 
 
     Set Main_DD to ojugador_DD
@@ -75,9 +78,25 @@ Object oZoomJugador is a cWebView
             WebRegisterPath ntNavigateForward oSelectEquipo
 
             Procedure OnPrompt
-                Send NavigatePath
+                Send NavigateForward of oSelectEquipo Self
             End_Procedure
         End_Object 
+
+        
+        Object oPosicionNombre is a cWebForm
+            Entry_Item posicion.Nombre
+            Set piColumnSpan to 6
+            Set piColumnIndex to 0
+            Set peLabelPosition to lpTop
+            Set psLabel to "Posición"
+            Set pbPromptButton to True
+
+            WebRegisterPath ntNavigateForward oSelectPosicion
+
+            Procedure OnPrompt
+                Send NavigateForward of oSelectPosicion Self
+            End_Procedure
+        End_Object
 
     End_Object 
 

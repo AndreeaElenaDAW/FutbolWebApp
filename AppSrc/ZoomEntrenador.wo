@@ -7,22 +7,20 @@ Use cWebPanel.pkg
 Use cWebMenuGroup.pkg
 Use cWebMenuItem.pkg
 Use cWebForm.pkg
-Use SelectJugador.wo
-
 Use cligaDataDictionary.dd
 Use cequipoDataDictionary.dd
 Use centrenadorDataDictionary.dd
 
 Object oZoomEntrenador is a cWebView
     Set piColumnCount to 12
-    Set psCaption to "ZoomEntrenador"
+    Set psCaption to "Zoom Entrenador"
     Set peWebViewStyle to wvsDrilldown
     Set peViewType to vtZoom
     Set pbShowCaption to False
     Set Verify_Save_Msg to 0
     Set piMaxWidth to 1024
 
-    WebRegisterPath ntNavigateForward oSelectJugador
+    WebRegisterPath ntNavigateForward oSelectEquipo
 
     Object oliga_DD is a cligaDataDictionary
     End_Object 
@@ -42,17 +40,9 @@ Object oZoomEntrenador is a cWebView
         Set piColumnCount to 12
         WebSetResponsive piColumnCount rmMobile to 4
 
-        Object oentrenadorID is a cWebForm
-            Entry_Item entrenador.ID
-            Set piColumnSpan to 2
-            Set piColumnIndex to 0
-            Set peLabelPosition to lpTop
-            Set psLabel to "ID"
-        End_Object 
-
         Object oentrenadorNombre is a cWebForm
             Entry_Item entrenador.Nombre
-            Set piColumnSpan to 10
+            Set piColumnSpan to 6
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "Nombre"
@@ -60,27 +50,29 @@ Object oZoomEntrenador is a cWebView
 
         Object oentrenadorApellido is a cWebForm
             Entry_Item entrenador.Apellido
-            Set piColumnSpan to 10
-            Set piColumnIndex to 0
+            Set piColumnSpan to 6
+            Set piColumnIndex to 6
             Set peLabelPosition to lpTop
             Set psLabel to "Apellido"
         End_Object 
 
         Object oentrenadorNacionalidad is a cWebForm
             Entry_Item entrenador.Nacionalidad
-            Set piColumnSpan to 8
+            Set piColumnSpan to 6
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "Nacionalidad"
         End_Object 
 
-        Object oequipoID is a cWebForm
-            Entry_Item equipo.ID
-            Set piColumnSpan to 2
-            Set piColumnIndex to 0
+        Object oequipoNombre is a cWebForm
+            Entry_Item equipo.Nombre
+            Set piColumnSpan to 6
+            Set piColumnIndex to 6
             Set peLabelPosition to lpTop
-            Set psLabel to "EquipoID"
+            Set psLabel to "Equipo"
             Set pbPromptButton to True
+
+            WebRegisterPath ntNavigateForward oSelectEquipo
 
             Procedure OnPrompt
                 Send NavigatePath
@@ -94,7 +86,7 @@ Object oZoomEntrenador is a cWebView
 
         Object oSaveBtn is a cWebMenuItem
             Set psCSSClass to "WebSaveMenuItem"
-            Set psCaption to "Save"
+            Set psCaption to "Guardar"
 
             Procedure OnClick
                 Send Request_Save
@@ -104,7 +96,7 @@ Object oZoomEntrenador is a cWebView
 
         Object oEditBtn is a cWebMenuItem
             Set psCSSClass to "WebEditMenuItem"
-            Set psCaption to "Edit"
+            Set psCaption to "Editar"
 
             Procedure OnClick
                 Send ChangeEditMode True
@@ -115,7 +107,7 @@ Object oZoomEntrenador is a cWebView
 
         Object oDeleteBtn is a cWebMenuItem
             Set psCSSClass to "WebDeleteMenuItem"
-            Set psCaption to "Delete"
+            Set psCaption to "Eliminar"
             Set peActionDisplay to adMenu
 
             Procedure OnClick
@@ -126,7 +118,7 @@ Object oZoomEntrenador is a cWebView
 
         Object oCancelChangesBtn is a cWebMenuItem
             Set psCSSClass to "WebIcon_Refresh"
-            Set psCaption to "Clear Changes"
+            Set psCaption to "Cancelar"
             Set peActionDisplay to adMenu
 
             Procedure OnClick
@@ -173,19 +165,13 @@ Object oZoomEntrenador is a cWebView
         Case Begin
             Case (NavigateData.eNavigateType = nfFromMain)
                 Case Break
-
             Case (NavigateData.eNavigateType = nfFromParent)
                 Case Break
-
             Case (NavigateData.eNavigateType = nfFromChild)
                 Case Break
-
             Case Else
-
         Case End
-
         Send SetActionButtons
-
     End_Procedure
 
 End_Object

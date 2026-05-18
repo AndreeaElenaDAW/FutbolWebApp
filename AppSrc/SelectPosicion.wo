@@ -34,7 +34,7 @@ Object oSelectPosicion is a cWebView
 
         Object oDetailButton is a cWebColumnButton
             Set psCaption to ""
-            Set piWidth to 45
+            Set piWidth to 45 
             Set pbFixedWidth to True
             Set pbResizable to False
             Set piListRowSpan to 1
@@ -56,7 +56,7 @@ Object oSelectPosicion is a cWebView
         Object oposicionNombre is a cWebColumn
             Entry_Item posicion.Nombre
             Set psCaption to "Posición"
-            Set piWidth to 600
+            Set piWidth to 600 
         End_Object 
 
         Procedure OnRowClick String sRowId
@@ -68,6 +68,7 @@ Object oSelectPosicion is a cWebView
                     Send NavigateForward of oZoomPosicion Self
                     Case Break
 
+                
                 Case (NavigateData.eNavigateType = nfFromChild)
                     Send NavigateClose Self
                     Case Break

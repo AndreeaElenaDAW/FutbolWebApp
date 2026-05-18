@@ -25,7 +25,7 @@ Object oDashboard is a cWebView
     // Also, it is important for the drill-down Navigation interface that we
     // do not set the Server property to some DDO because this will affect 
     // constraints in the next view that we navigate to.
-    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
 
     Set piMaxWidth to 1024
     
@@ -72,21 +72,23 @@ Object oDashboard is a cWebView
                 Set psCSSClass to "Tile LightAlternate"
                 Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Entrenador</div><div class="Tile_Subtitle">Seleccionar</div></div>'
                                 
-                // WebRegisterPath ntNavigateForwardCustom oYourViewName
+                // Ruta registrada hacia la vista de Entrenador
+                WebRegisterPath ntNavigateForward oSelectEntrenador
                 
                 Procedure OnClick String sId String sParam
                     Send NavigatePath
                 End_Procedure
                 
             End_Object
-    
+
             Object oJugador_Tile is a cWebHtmlBox
                 Set pbServerOnClick to True
                 Set piColumnSpan to 6
                 Set psCSSClass to "Tile Dark"
                 Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Jugador</div><div class="Tile_Subtitle">Seleccionar</div></div>'
     
-                // WebRegisterPath ntNavigateForwardCustom oYourViewName
+                // Usamos ntNavigateForward (estándar) apuntando al objeto
+                WebRegisterPath ntNavigateForward oSelectJugador
                 
                 Procedure OnClick String sId String sParam
                     Send NavigatePath
@@ -101,7 +103,8 @@ Object oDashboard is a cWebView
                 Set psCSSClass to "Tile DarkAlternate"
                 Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Posicion</div><div class="Tile_Subtitle">Seleccionar</div></div>'
             
-                // WebRegisterPath ntNavigateForwardCustom oYourViewName
+                // Usamos ntNavigateForward (estándar) apuntando al objeto
+                WebRegisterPath ntNavigateForward oSelectPosicion
                 
                 Procedure OnClick String sId String sParam
                     Send NavigatePath
@@ -109,35 +112,37 @@ Object oDashboard is a cWebView
                 
             End_Object
             
-             Object oEquipo_Tile is a cWebHtmlBox
+            Object oEquipo_Tile is a cWebHtmlBox
                 Set pbServerOnClick to True
                 Set piColumnSpan to 6
                 Set piColumnIndex to 0
                 Set psCSSClass to "Tile DarkAlternate"
                 Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Equipo</div><div class="Tile_Subtitle">Seleccionar</div></div>'
             
-                // WebRegisterPath ntNavigateForwardCustom oYourViewName
+                // Ruta registrada hacia la vista de Equipo
+                WebRegisterPath ntNavigateForward oSelectEquipo
                 
                 Procedure OnClick String sId String sParam
                     Send NavigatePath
                 End_Procedure
                 
-             End_Object
+            End_Object
              
-              Object oLiga_Tile is a cWebHtmlBox
+            Object oLiga_Tile is a cWebHtmlBox
                 Set pbServerOnClick to True
                 Set piColumnSpan to 6
                 Set piColumnIndex to 6
                 Set psCSSClass to "Tile DarkAlternate"
                 Set psHtml to '<div class="WebCon_Sizer" data-ServerOnClick="openview"><div Class="Tile_Title">Liga</div><div class="Tile_Subtitle">Seleccionar</div></div>'
             
-                // WebRegisterPath ntNavigateForwardCustom oYourViewName
+                // Ruta registrada hacia la vista de Liga
+                WebRegisterPath ntNavigateForward oSelectLiga
                 
                 Procedure OnClick String sId String sParam
                     Send NavigatePath
                 End_Procedure
                 
-              End_Object
+            End_Object
               
         End_Object
     

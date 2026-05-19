@@ -23,4 +23,12 @@ Class cequipoDataDictionary is a DataDictionary
 
     End_Procedure
 
+    // CÓDIGO DE PRUEBA DE DESCARTE:
+    // Filtramos únicamente por el ID de la liga de forma directa.
+    Procedure OnConstrain
+        If (liga.ID > 0) Begin
+            Constrain equipo.LigaID eq liga.ID
+        End
+    End_Procedure
+
 End_Class
